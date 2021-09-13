@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
+import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
+import { List } from '../list';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-list',
@@ -8,8 +10,8 @@ import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
 })
 export class ListComponent implements OnInit {
 
-  list = {
-    id: "1",
+  list: List = {
+    id: 1,
     label: "What is the best JS framework",
     items: [
       {name: "Angular", id: "1", rank: "1"},
@@ -19,7 +21,9 @@ export class ListComponent implements OnInit {
     ]
   }
 
-  constructor() { }
+  constructor(
+    private location: Location
+  ) { }
 
   ngOnInit(): void {
   }
@@ -34,6 +38,10 @@ export class ListComponent implements OnInit {
     })
 
     console.log(this.list.items)
+  }
+
+  goBack(): void {
+    this.location.back();
   }
 
 }
