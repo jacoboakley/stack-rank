@@ -1,0 +1,6 @@
+.button-group {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}

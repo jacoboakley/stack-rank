@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { List } from '../list';
 import { Location } from '@angular/common';
+import {MatDialog} from '@angular/material/dialog';
+import { DialogComponent } from '../dialog/dialog.component';
 
 @Component({
   selector: 'app-list',
@@ -9,6 +11,9 @@ import { Location } from '@angular/common';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
+
+  title: string = "Vote Succesful"
+  content: string = "Thank you for your vote. It has been recored and added to our records"
 
   list: List = {
     id: 1,
@@ -22,7 +27,8 @@ export class ListComponent implements OnInit {
   }
 
   constructor(
-    private location: Location
+    private location: Location,
+    public dialog: MatDialog
   ) { }
 
   ngOnInit(): void {
@@ -32,10 +38,21 @@ export class ListComponent implements OnInit {
     moveItemInArray(this.list.items, event.previousIndex, event.currentIndex);
   }
 
+  openDialog() {
+    this.dialog.open(DialogComponent, {
+      data: {
+        title: this.title,
+        content: this.content
+      }
+    });
+  }
+
   handleVote() {
     this.list.items.forEach((item, index) => {
       item.rank = `${index + 1}`;
     })
+
+    this.openDialog();
 
     console.log(this.list.items)
   }
