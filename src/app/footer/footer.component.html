@@ -1,0 +1,13 @@
+<footer>
+  <div [className]="'copyright'">
+    <p>Copyright &copy;{{year}}</p>
+    <p>Jacob Oakley All Rights Reserved</p>
+  </div>
+  <div>
+    <div *ngFor="let item of sites">
+      <a href={{item.route}} target="_blank" rel="noopener noreferrer">
+        <img src={{item.image}} alt={{item.imageAlt}}>
+      </a>
+    </div>
+  </div>
+</footer>

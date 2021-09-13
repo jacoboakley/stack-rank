@@ -1,0 +1,6 @@
+<header>
+  <h1><a routerLink="/home">{{title}}</a></h1>
+  <nav>
+    <a *ngFor="let item of links" routerLink={{item.route}}>{{item.label}}</a>
+  </nav>
+</header>

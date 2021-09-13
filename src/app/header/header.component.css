@@ -1,0 +1,26 @@
+header {
+  align-items: center;
+  background: #2c3e50;
+  height: 5vh;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+header > h1 {
+  padding-left: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: #ecf0f1;
+}
+
+nav > a {
+  font-weight: bold;
+  padding: 20px;
+}
