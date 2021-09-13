@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-list',
@@ -21,6 +22,18 @@ export class ListComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  drop(event: CdkDragDrop<string[]>) {
+    moveItemInArray(this.list.items, event.previousIndex, event.currentIndex);
+  }
+
+  handleVote() {
+    this.list.items.forEach((item, index) => {
+      item.rank = `${index + 1}`;
+    })
+
+    console.log(this.list.items)
   }
 
 }

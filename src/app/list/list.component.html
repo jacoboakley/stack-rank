@@ -1,4 +1,15 @@
-<h2>{{list.label}}</h2>
+<!-- <h2>{{list.label}}</h2>
 <ul>
   <li *ngFor="let item of list.items">{{item.name}}</li>
-</ul>
+</ul> -->
+
+<h2>{{list.label}}</h2>
+<div>
+  <div cdkDropList class="list-wrapper" (cdkDropListDropped)="drop($event)">
+    <ul class="list-container" *ngFor="let item of list.items" cdkDrag>
+      <li class="custom-placeholder" *cdkDragPlaceholder></li>
+      {{item.name}}
+    </ul>
+  </div>
+</div>
+<button mat-raised-button color="primary" (click)="handleVote()">Vote!</button>

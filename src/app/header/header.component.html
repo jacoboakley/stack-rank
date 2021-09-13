@@ -1,6 +1,10 @@
-<header>
+<mat-toolbar color="primary">
   <h1><a routerLink="/home">{{title}}</a></h1>
-  <nav>
-    <a *ngFor="let item of links" routerLink={{item.route}}>{{item.label}}</a>
-  </nav>
-</header>
+  <span class="spacer"></span>
+  <button class="menuButton" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Menu Button">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item *ngFor="let item of links" (click)=" goToRoute(item.route)">{{item.label}}</button>
+  </mat-menu>
+</mat-toolbar>

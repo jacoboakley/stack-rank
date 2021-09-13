@@ -1,38 +1,25 @@
 section {
   align-items: center;
   display: flex;
-  max-width: 1200px;
-  margin: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-section > img {
-  background: #2c3e50;
-  border-radius: 20px;
-  height: 300px;
+mat-card {
+  align-items: center;
+  display: flex;
+  justify-content: center;
   margin: 50px;
+  width: 500px;
 }
 
-.imageLeft {
-  flex-direction: row;
+mat-card > img {
+  background: #673ab7;
+  margin: 20px;
+  height: 300px;
+  width: 300px;
 }
 
-.imageRight {
-  flex-direction: row-reverse
-}
-
-.imageLeft > img {
-  box-shadow: 3px 2px 5px white;;
-}
-
-.imageRight > img {
-  box-shadow: -3px 2px 5px white;;
-}
-
-section > div {
-  min-width: 250px;
-  max-width: 750px;
-}
-
-section > div > p {
-  font-size: 3vmin
+mat-card:hover {
+  transform: scale(1.25);
 }

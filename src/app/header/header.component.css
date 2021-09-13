@@ -1,15 +1,9 @@
-header {
-  align-items: center;
-  background: #2c3e50;
+mat-toolbar {
   height: 10vh;
-  display: flex;
-  justify-content: space-between;
-  margin: 0;
-  padding: 0;
 }
 
-header > h1 {
-  padding-left: 20px;
+mat-toolbar > h1 {
+  font-size: 5rem;
 }
 
 a {
@@ -19,8 +13,10 @@ a {
 a:visited {
   color: #ecf0f1;
 }
+.spacer {
+  flex: 1 1 auto;
+}
 
-nav > a {
-  font-weight: bold;
-  padding: 20px;
+mat-icon {
+  transform: scale(1.75)
 }
