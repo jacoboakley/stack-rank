@@ -1,0 +1,8 @@
+<section>
+  <mat-card *ngFor="let list of lists" (click)="goToRoute(list.id)">
+      <mat-card-title>{{list.label | uppercase}}</mat-card-title>
+      <mat-card-content>
+        <p *ngFor="let item of list.items">{{item.name}}</p>
+      </mat-card-content>
+  </mat-card>
+</section>

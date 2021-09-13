@@ -12,7 +12,7 @@ export class HeaderComponent implements OnInit {
 
   links: Array<any> = [
     {route: "/home", label: "Home"},
-    {route: "/list", label: "List"}
+    {route: "/lists", label: "Lists"}
   ]
 
   constructor(private router: Router){}
@@ -23,5 +23,4 @@ export class HeaderComponent implements OnInit {
   goToRoute(route: string): void {
     this.router.navigateByUrl(route)
   }
-
 }

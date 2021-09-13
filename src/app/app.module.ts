@@ -14,7 +14,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
-import {MatIconModule} from '@angular/material/icon'
+import {MatIconModule} from '@angular/material/icon';
+import { ListsComponent } from './lists/lists.component'
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import {MatIconModule} from '@angular/material/icon'
     HomeComponent,
     FooterComponent,
     HeaderComponent,
+    ListsComponent,
   ],
   imports: [
     BrowserModule,
