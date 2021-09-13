@@ -1,0 +1,38 @@
+section {
+  align-items: center;
+  display: flex;
+  max-width: 1200px;
+  margin: 20px;
+}
+
+section > img {
+  background: #2c3e50;
+  border-radius: 20px;
+  height: 300px;
+  margin: 50px;
+}
+
+.imageLeft {
+  flex-direction: row;
+}
+
+.imageRight {
+  flex-direction: row-reverse
+}
+
+.imageLeft > img {
+  box-shadow: 3px 2px 5px white;;
+}
+
+.imageRight > img {
+  box-shadow: -3px 2px 5px white;;
+}
+
+section > div {
+  min-width: 250px;
+  max-width: 750px;
+}
+
+section > div > p {
+  font-size: 3vmin
+}

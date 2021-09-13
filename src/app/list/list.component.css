@@ -1,0 +1,11 @@
+li {
+  align-items: center;
+  border-radius: 50px;
+  background: white;
+  color: #34495e;
+  display: flex;
+  min-height: 5vmin;
+  justify-content: center;
+  list-style-type: none;
+  margin: 1rem;
+}

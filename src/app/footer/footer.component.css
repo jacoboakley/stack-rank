@@ -16,15 +16,17 @@ footer > * {
 }
 
 .copyright > p {
+  font-size: 1em;
   margin: 0;
 }
 
 img {
-  height: 40px;
+  min-height:40px;
+  height: 5vmin;
 }
 
 a {
-  padding: 10px;
+  padding: 2vmin;
 }
 
 a:visited {

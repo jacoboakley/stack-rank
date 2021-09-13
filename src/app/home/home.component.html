@@ -1,1 +1,7 @@
-<p>home works!</p>
+<section [ngClass]="i % 2 === 0 ? 'imageLeft' : 'imageRight'" *ngFor="let section of sections; let i = index">
+  <img src={{section.image}}>
+  <div>
+    <h2>{{section.title | uppercase}}</h2>
+    <p>{{section.content}}</p>
+  </div>
+</section>
